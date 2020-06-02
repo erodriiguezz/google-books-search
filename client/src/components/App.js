@@ -7,7 +7,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="app">
-        <h1>MERN Stack App</h1>
+        <h1>Google Books Search</h1>
         {/* <Router>
           <Navigation />
 
