@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors());
 require("dotenv").config();
 
-const uri = process.env.MONGODB_URI || "mongodb://localhost/exampleDatabase";
+const uri = process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
 mongoose
   .connect(uri, {
     useNewUrlParser: true,
@@ -19,9 +19,9 @@ mongoose
   .catch(console.error);
 
 // API routes
-require("./routes/api/example")(app);
+require("./routes/api/book")(app);
 
-// // production build
+// production build
 app.use(express.static(path.join(__dirname, "client", "build")));
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));

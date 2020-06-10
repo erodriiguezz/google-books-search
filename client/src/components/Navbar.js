@@ -11,7 +11,6 @@ import {
   MDBDropdownToggle,
   MDBDropdownMenu,
   MDBDropdownItem,
-  MDBIcon,
 } from "mdbreact";
 
 class NavbarPage extends Component {
@@ -32,7 +31,9 @@ class NavbarPage extends Component {
         style={{ padding: "20px 10%" }}
       >
         <MDBNavbarBrand>
-          <strong className="white-text">Google Books</strong>
+          <MDBNavLink className="white-text" to="/">
+            Google Books
+          </MDBNavLink>
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse} />
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
@@ -54,7 +55,7 @@ class NavbarPage extends Component {
                   />
                 </MDBDropdownToggle>
                 <MDBDropdownMenu className="dropdown-default" right>
-                  <MDBDropdownItem href="#!">My account</MDBDropdownItem>
+                  <MDBDropdownItem href="/account">My account</MDBDropdownItem>
                   <MDBDropdownItem href="#!">Log out</MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>

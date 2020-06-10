@@ -8,6 +8,7 @@ In this activity, you'll create a new React-based Google Books Search app. This 
 
 - `npm install` install server dependencies
 - `npm run client-install` install react dependencies
+- create MongoDB database named **googlebooks**
 - `npm run server` initialize express server
 - `npm run client` initialize react server
 
