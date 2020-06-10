@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Card from "./Card";
 
-export default class SavedBooks extends Component {
+export default class Favorites extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +21,13 @@ export default class SavedBooks extends Component {
     return (
       <div>
         {this.state.books.map((book) => (
-          <h1 key={book}>{book.title}</h1>
+          <Card
+            key={book}
+            src={book.image}
+            title={book.title}
+            author={book.authors[0]}
+            description={book.description}
+          />
         ))}
       </div>
     );

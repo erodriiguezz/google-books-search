@@ -42,7 +42,7 @@ class NavbarPage extends Component {
               <MDBNavLink to="/">Home</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="/saved-books">Saved Books</MDBNavLink>
+              <MDBNavLink to="/browse">Browse</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBDropdown>
@@ -55,6 +55,7 @@ class NavbarPage extends Component {
                   />
                 </MDBDropdownToggle>
                 <MDBDropdownMenu className="dropdown-default" right>
+                  <MDBDropdownItem href="/favorites">Favorites</MDBDropdownItem>
                   <MDBDropdownItem href="/account">My account</MDBDropdownItem>
                   <MDBDropdownItem href="#!">Log out</MDBDropdownItem>
                 </MDBDropdownMenu>
