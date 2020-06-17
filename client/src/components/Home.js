@@ -35,7 +35,7 @@ export default class Home extends Component {
     if (e.key === "Enter") {
       let url = `https://www.googleapis.com/books/v1/volumes?q=intitle:${e.target.value}`;
 
-      this.setState({ loading: true });
+      this. setState({ loading: true });
 
       axios
         .get(url)
@@ -77,8 +77,8 @@ export default class Home extends Component {
                       margin: "auto",
                     }}
                   >
-                    Need help finding about about your next reading adventure?
-                    Search for a book title and get the information you need.
+                    Need help finding about your next reading adventure? Search
+                    for a book title and get the information you need.
                   </p>
                   <input
                     className="form-control"
