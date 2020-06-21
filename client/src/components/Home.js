@@ -46,6 +46,10 @@ export default class Home extends Component {
     }
   };
 
+  saveBook = (e) => {
+    console.log(e.target);
+  };
+
   render() {
     return (
       <div>
@@ -100,10 +104,7 @@ export default class Home extends Component {
             </MDBCol>
           </MDBRow>
         </MDBContainer>
-        {/* {this.state.books.forEach((book) => {
-          console.log(book.volumeInfo.authors);
-        })} */}
-        <Results books={this.state.books} />
+        <Results books={this.state.books} onClick={this.saveBook} />
       </div>
     );
   }

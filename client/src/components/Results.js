@@ -15,6 +15,7 @@ export default class Results extends Component {
             title={book.volumeInfo.title}
             authors={book.volumeInfo.authors}
             description={book.volumeInfo.description}
+            onClick={this.props.onClick}
           />
         ))}
       </MDBContainer>

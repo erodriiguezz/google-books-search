@@ -28,7 +28,12 @@ const Card = (props) => {
         <MDBCardTitle>{props.title}</MDBCardTitle>
         <div style={{ marginBottom: "10px" }}>{authors}</div>
         <MDBCardText>{props.description}</MDBCardText>
-        <MDBBtn style={{ margin: 0 }} color="warning" href="#">
+        <MDBBtn
+          style={{ margin: 0 }}
+          color="warning"
+          href="#"
+          onClick={props.onClick}
+        >
           Save
         </MDBBtn>
       </MDBCardBody>

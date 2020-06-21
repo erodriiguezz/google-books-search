@@ -21,14 +21,12 @@ module.exports = function (app) {
     const title = req.body.title;
     const authors = req.body.authors;
     const description = req.body.description;
-    const image = req.body.image;
     const link = req.body.link;
 
     const newBook = new Book({
       title,
       authors,
       description,
-      image,
       link,
     });
 
