@@ -23,9 +23,8 @@ export default class Favorites extends Component {
         {this.state.books.map((book) => (
           <Card
             key={book}
-            src={book.image}
             title={book.title}
-            author={book.authors[0]}
+            authors={book.authors}
             description={book.description}
           />
         ))}

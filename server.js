@@ -8,7 +8,10 @@ app.use(express.json());
 app.use(cors());
 require("dotenv").config();
 
-const uri = process.env.MONGO_LAB || process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
+const uri =
+  "mongodb://localhost/googlebooks" ||
+  process.env.MONGO_LAB ||
+  process.env.MONGODB_URI;
 mongoose
   .connect(uri, {
     useNewUrlParser: true,
