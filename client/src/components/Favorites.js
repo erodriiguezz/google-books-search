@@ -22,7 +22,7 @@ export default class Favorites extends Component {
       <div>
         {this.state.books.map((book) => (
           <Card
-            key={book}
+            key={book.title}
             title={book.title}
             authors={book.authors}
             description={book.description}

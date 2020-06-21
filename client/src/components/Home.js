@@ -47,7 +47,14 @@ export default class Home extends Component {
   };
 
   saveBook = (e) => {
-    console.log(e.target);
+    // let book = {
+    //   title: "test title",
+    //   authors: ["test", "author"],
+    //   description:
+    //     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi libero aliquam ducimus dicta repellendus nostrum iusto facilis nesciunt sint enim. Incidunt voluptatibus ullam est? Doloremque eveniet ipsam corporis eum laudantium?",
+    //   link: "this is the a link",
+    // };
+    // axios.post("/api/addBook", book).then(console.log("book saved"));
   };
 
   render() {

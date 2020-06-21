@@ -39,10 +39,10 @@ class NavbarPage extends Component {
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
           <MDBNavbarNav right style={{ alignItems: "center" }}>
             <MDBNavItem>
-              <MDBNavLink to="/">Home</MDBNavLink>
+              <MDBNavLink to="/">Browse</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="/browse">Browse</MDBNavLink>
+              <MDBNavLink to="/favorites">Favorites</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBDropdown>
@@ -55,7 +55,6 @@ class NavbarPage extends Component {
                   />
                 </MDBDropdownToggle>
                 <MDBDropdownMenu className="dropdown-default" right>
-                  <MDBDropdownItem href="/favorites">Favorites</MDBDropdownItem>
                   <MDBDropdownItem href="/account">My account</MDBDropdownItem>
                   <MDBDropdownItem href="#!">Log out</MDBDropdownItem>
                 </MDBDropdownMenu>

@@ -7,7 +7,7 @@ const JumbotronPage = () => {
       <MDBRow>
         <MDBCol>
           <MDBJumbotron>
-            <h2 className="h1 display-3">Comming Soon!</h2>
+            <h2 className="h1 display-3">Coming Soon!</h2>
             <p className="lead">
               We are working very hard to integrate user accounts to this app,
               stay tuned!

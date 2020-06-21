@@ -18,21 +18,8 @@ module.exports = function (app) {
   });
 
   app.post("/api/addBook", (req, res) => {
-    const title = req.body.title;
-    const authors = req.body.authors;
-    const description = req.body.description;
-    const link = req.body.link;
-
-    const newBook = new Book({
-      title,
-      authors,
-      description,
-      link,
-    });
-
-    newBook
-      .save()
-      .then((response) => res.json(response))
+    Book.create(req.body)
+      .then((data) => res.json(data))
       .catch(console.error);
   });
 
