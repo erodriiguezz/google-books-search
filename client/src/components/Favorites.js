@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { MDBContainer, MDBCardTitle } from "mdbreact";
+
 import Card from "./Card";
 
 export default class Favorites extends Component {
@@ -11,15 +13,25 @@ export default class Favorites extends Component {
   }
 
   componentDidMount() {
+    this.getSavedBooks();
+  }
+
+  componentDidUpdate() {
+    this.getSavedBooks();
+  }
+
+  getSavedBooks = () => {
     axios
       .get("/api/getBooks")
       .then((books) => this.setState({ books: books.data }))
       .catch(console.error);
-  }
+  };
 
   render() {
     return (
-      <div>
+      <MDBContainer style={{ marginTop: "60px", padding: "0 10%" }}>
+        <MDBCardTitle className="mb-4">Saved Books:</MDBCardTitle>
+
         {this.state.books.map((book) => (
           <Card
             key={book.title}
@@ -28,7 +40,7 @@ export default class Favorites extends Component {
             description={book.description}
           />
         ))}
-      </div>
+      </MDBContainer>
     );
   }
 }

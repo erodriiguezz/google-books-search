@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
+import axios from "axios";
 import {
   MDBJumbotron,
   MDBContainer,
@@ -6,12 +8,11 @@ import {
   MDBCol,
   MDBCardTitle,
 } from "mdbreact";
-import axios from "axios";
 
 import Loading from "./Loading";
 import Results from "./Results";
 
-export default class Home extends Component {
+class Home extends Component {
   constructor(props) {
     super(props);
 
@@ -47,6 +48,8 @@ export default class Home extends Component {
   };
 
   saveBook = (e) => {
+    console.log();
+
     // let book = {
     //   title: "test title",
     //   authors: ["test", "author"],
@@ -55,6 +58,7 @@ export default class Home extends Component {
     //   link: "this is the a link",
     // };
     // axios.post("/api/addBook", book).then(console.log("book saved"));
+    this.props.history.push("/favorites");
   };
 
   render() {
@@ -116,3 +120,5 @@ export default class Home extends Component {
     );
   }
 }
+
+export default withRouter(Home);
