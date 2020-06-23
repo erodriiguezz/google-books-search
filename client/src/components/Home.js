@@ -47,18 +47,24 @@ class Home extends Component {
     }
   };
 
-  saveBook = (e) => {
-    console.log();
+  saveBook = (bookId) => {
+    let url = `https://www.googleapis.com/books/v1/volumes?q=${bookId}`;
+    axios
+      .get(url)
+      .then((book) => {
+        let bookData = book.data.items[0].volumeInfo;
 
-    // let book = {
-    //   title: "test title",
-    //   authors: ["test", "author"],
-    //   description:
-    //     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi libero aliquam ducimus dicta repellendus nostrum iusto facilis nesciunt sint enim. Incidunt voluptatibus ullam est? Doloremque eveniet ipsam corporis eum laudantium?",
-    //   link: "this is the a link",
-    // };
-    // axios.post("/api/addBook", book).then(console.log("book saved"));
-    this.props.history.push("/favorites");
+        let bookInfo = {
+          title: bookData.title,
+          authors: bookData.authors,
+          description: bookData.description,
+          link: bookData.infoLink,
+        };
+
+        axios.post("/api/addBook", bookInfo).then(console.log("book saved"));
+        this.props.history.push("/favorites");
+      })
+      .catch(console.error);
   };
 
   render() {
